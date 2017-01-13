@@ -13,7 +13,15 @@ body {
     padding: 0px;
 }
 
-.topnav input[type="text"], .topnav input[type="password"], .topnav input[type="submit"] {
+.topnav a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.topnav input[type="text"], .topnav input[type="password"], .topnav input[type="submit"], .topnav select {
     padding: 0px;
 }
 
@@ -35,4 +43,16 @@ body {
 
 .floatright {
     float: right;
+}
+
+.searchresults {
+    margin: auto;
+}
+
+.searchresults th, .searchresults td, .searchresults tr, .searchresults {
+    border: 1px solid;
+}
+
+.searchresults .text {
+    padding: 5px;
 }

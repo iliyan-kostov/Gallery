@@ -3,5 +3,4 @@
 
 // logic here
 
-require 'index.php';
 ?>

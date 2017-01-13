@@ -1,7 +1,12 @@
 <?php require_once 'sessionSettings.php'; ?>
 <?php
 
-// logic here
+function logout() {
+    if (isset($_SESSION['username'])) {
+        unset($_SESSION['username']);
+    }
+}
 
+logout();
 require 'index.php';
 ?>
