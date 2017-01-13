@@ -9,12 +9,20 @@ body {
     width: 100%;
     position: fixed;
     white-space: nowrap;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.topnav input[type="text"], .topnav input[type="password"], .topnav input[type="submit"] {
+    padding: 0px;
+}
+
+.topnav input[type="text"], .topnav input[type="password"] {
     height: 20px;
-    font-size: 14px;
 }
 
 .content {
-    padding-top: 25px;
+    padding-top: 30px;
 }
 
 .topnav table {

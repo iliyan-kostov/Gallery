@@ -1,3 +1,4 @@
+<?php require_once 'sessionSettings.php'; ?>
 <?php
 
 echo '            ' . "\n";
@@ -45,14 +46,11 @@ echo '            ' . '    <tr>' . "\n";
         {
             echo '            ' . '        <td class="floatright" id="userControls">' . "\n";
             echo '            ' . '            <div class="text">' . "\n";
-            
-            
             echo '            ' . '                <form action="login.php" method="post">' . "\n";
             echo '            ' . '                    <input type="text" name="username">' . "\n";
             echo '            ' . '                    <input type="password" name="password">' . "\n";
             echo '            ' . '                    <input type="submit" value="Login">' . "\n";
             echo '            ' . '                </form>' . "\n";
-            
             echo '            ' . '            </div>' . "\n";
             echo '            ' . '        </td>' . "\n";
         }

@@ -1,3 +1,4 @@
+<?php require_once 'sessionSettings.php'; ?>
 <?php
 
 // session initialization:
@@ -15,6 +16,7 @@ if (!isset($_SESSION['settings'])) {
     }
 
     $_SESSION['settings']['database']['server_name'] = 'INSERT_SERVER_NAME_HERE';
+    $_SESSION['settings']['database']['database_name'] = 'INSERT_DATABASE_NAME_HERE';
     $_SESSION['settings']['database']['root_username'] = 'INSERT_ROOT_USERNAME_HERE';
     $_SESSION['settings']['database']['root_password'] = 'INSERT_ROOT_PASSWORD_HERE';
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require 'sessionSettings.php'; ?>
+<?php require_once 'sessionSettings.php'; ?>
 <html>
     <head>
         <meta charset="UTF-8">

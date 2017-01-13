@@ -1,3 +1,4 @@
+<?php require_once 'sessionSettings.php'; ?>
 <?php
 echo "\n";
 
