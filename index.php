@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<?php require './php/sessionSettings.php'; ?>
+<?php require 'sessionSettings.php'; ?>
 <html>
     <head>
         <meta charset="UTF-8">
-        <?php require './php/sessionSettings_getStyleTags.php'; ?>
+        <?php require 'sessionSettings_getStyleTags.php'; ?>
         <title></title>
     </head>
     <body>
         <div class="topnav">
-            <?php require './php/index_topnav.php'; ?>
+            <?php require 'index_topnav.php'; ?>
         </div>
         <div class="content">
-            <?php require './php/index_content.php'; ?>
+            <?php require 'index_content.php'; ?>
         </div>
     </body>
 </html>
