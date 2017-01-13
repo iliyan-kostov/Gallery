@@ -40,10 +40,12 @@ function search() {
                                 'SELECT `username` ' .
                                 'FROM `users` ' .
                                 'WHERE `username` LIKE ? ' .
-                                'ORDER BY `username` ASC;'
+                                'ORDER BY `username` ASC ' .
+                                'LIMIT ?;'
                         );
-                        $param = '%' . $search . '%';
-                        $stmt->bind_param("s", $param);
+                        $param1 = '%' . $search . '%';
+                        $param2 = $searchlimit;
+                        $stmt->bind_param("ss", $param1, $param2);
                         if ($stmt->execute()) {
                             $stmt->bind_result($name);
                             echo '            ' . "\n";
@@ -77,10 +79,12 @@ function search() {
                                 'SELECT `gallery_name`, `gallery_id` ' .
                                 'FROM `galleries` ' .
                                 'WHERE `gallery_name` LIKE ? ' .
-                                'ORDER BY `gallery_id` DESC;'
+                                'ORDER BY `gallery_id` DESC ' .
+                                'LIMIT ?;'
                         );
-                        $param = '%' . $search . '%';
-                        $stmt->bind_param("s", $param);
+                        $param1 = '%' . $search . '%';
+                        $param2 = $searchlimit;
+                        $stmt->bind_param("ss", $param1, $param2);
                         if ($stmt->execute()) {
                             $stmt->bind_result($name, $id);
                             echo '            ' . "\n";
@@ -120,10 +124,12 @@ function search() {
                                 'SELECT `image_name`, `image_id`, `gallery_id` ' .
                                 'FROM `images` ' .
                                 'WHERE `image_name` LIKE ? ' .
-                                'ORDER BY `image_id` DESC;'
+                                'ORDER BY `image_id` DESC ' .
+                                'LIMIT ?;'
                         );
-                        $param = '%' . $search . '%';
-                        $stmt->bind_param("s", $param);
+                        $param1 = '%' . $search . '%';
+                        $param2 = $searchlimit;
+                        $stmt->bind_param("ss", $param1, $param2);
                         if ($stmt->execute()) {
                             $stmt->bind_result($name, $id, $gallery_id);
                             echo '            ' . "\n";
@@ -145,7 +151,7 @@ function search() {
                                 $path = 'galleries/' . $gallery_id . '/' . $name;
                                 echo '            ' . '    <tr>' . "\n";
                                 echo '            ' . '        <td>' . "\n";
-                                echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . '<img src="' . $path . '">' . '</a>' . "\n";
+                                echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . '<img src="' . $path . '" class="tiny">' . '</a>' . "\n";
                                 echo '            ' . '        </td>' . "\n";
                                 echo '            ' . '        <td>' . "\n";
                                 echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . $name . '</a>' . "\n";

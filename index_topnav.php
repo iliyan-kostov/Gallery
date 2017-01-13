@@ -45,7 +45,7 @@ echo '            ' . '    <tr>' . "\n";
             echo '            ' . '        </td>' . "\n";
             echo '            ' . '        <td class="floatright" id="myGalleries">' . "\n";
             echo '            ' . '            <div class="text">' . "\n";
-            echo '            ' . '                MYGALLERIES' . "\n";
+            echo '            ' . '                <a href="index.php?myGalleries">MY GALLERIES</a>' . "\n";
             echo '            ' . '            </div>' . "\n";
             echo '            ' . '        </td>' . "\n";
         }

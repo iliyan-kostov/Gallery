@@ -8,7 +8,6 @@ if (isset($_GET['login'])) {
 } else if (isset($_GET['logout'])) {
     
 } else if (isset($_GET['myGalleries'])) {
-    echo '<div class="text">MyGalleries page</div>';
     require 'myGalleries.php';
 } else if (isset($_GET['search'])) {
     require 'search.php';
