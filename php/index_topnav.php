@@ -1,0 +1,32 @@
+<?php
+echo '            ' . "\n";
+?>
+
+<table>
+    <tr>
+        <td>
+            HOME
+        </td>
+        <td>
+            [search]
+        </td>
+        <td>
+            [searchlimit]
+        </td>
+        <td>
+            SEARCH
+        </td>
+        <td>
+            >...<
+        </td>
+        <td>
+            [username]
+        </td>
+        <td>
+            [password]
+        </td>
+        <td>
+            LOGIN
+        </td>
+    </tr>
+</table>
