@@ -1,3 +1,30 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    overflow-x: scroll;
+}
+
+.topnav {
+    border-bottom: 1px solid;
+    width: 100%;
+    position: fixed;
+    white-space: nowrap;
+    height: 20px;
+    font-size: 14px;
+}
+
+.content {
+    padding-top: 25px;
+}
+
+.topnav table {
+    width: 100%;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
 }

@@ -1,3 +1,12 @@
 body {
-    
+    background-color: #004020;
+}
+
+.topnav {
+    border-color: white;
+    background-color: #002010;
+}
+
+.text {
+    color: white;
 }
