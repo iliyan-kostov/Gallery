@@ -31,6 +31,9 @@ h1, h2, h3 {
 
 .content {
     padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .topnav table {
@@ -64,4 +67,27 @@ h1, h2, h3 {
 .preview {
     max-width: 100px;
     max-height: 100px;
+}
+
+.full_view {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.preview, .full_view {
+    margin: auto;
+    display: block;
+    padding: 3px;
+}
+
+#comment_submit, #comment_textarea {
+    display: block;
+    margin: auto;
+    width: 90%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#comment_textarea {
+    height: 100px;
 }

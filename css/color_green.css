@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-.searchresults td, input[type="text"], input[type="password"] {
+.searchresults td, input[type="text"], input[type="password"], input[type="textarea"] {
     background-color: #006030;
 }
 

@@ -14,9 +14,9 @@ function login() {
         $password = strip_tags($password);
 
         if (strlen($username) < $_SESSION['settings']['database']['min_username_length']) {
-            echo "Username too short!";
+            //echo "Username too short!";
         } else if (strlen($password) < $_SESSION['settings']['database']['min_password_length']) {
-            echo "Password too short!";
+            //echo "Password too short!";
         } else {
 
             $server_name = $_SESSION['settings']['database']['server_name'];

@@ -10,7 +10,6 @@ if (isset($_GET['myGalleries'])) {
 } else if (isset($_GET['getGallery'])) {
     require 'getGallery.php';
 } else if (isset($_GET['getImage'])) {
-    echo '<div class="text">GetImage page</div>';
     require 'getImage.php';
 } else if (isset($_GET['getUser'])) {
     require 'getUser.php';
