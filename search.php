@@ -151,7 +151,7 @@ function search() {
                                 $path = 'galleries/' . $gallery_id . '/' . $name;
                                 echo '            ' . '    <tr>' . "\n";
                                 echo '            ' . '        <td>' . "\n";
-                                echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . '<img src="' . $path . '" class="tiny">' . '</a>' . "\n";
+                                echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . '<img src="' . $path . '" class="preview">' . '</a>' . "\n";
                                 echo '            ' . '        </td>' . "\n";
                                 echo '            ' . '        <td>' . "\n";
                                 echo '            ' . '            <a class="text" href="index.php?getImage=' . $id . '">' . $name . '</a>' . "\n";

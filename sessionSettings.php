@@ -28,6 +28,8 @@ if (!isset($_SESSION['settings'])) {
     $_SESSION['settings']['database']['max_password_length'] = 30; // 30 characters
     $_SESSION['settings']['database']['max_descriptions_length'] = 500; // 500 characters
     $_SESSION['settings']['database']['max_comments_length'] = 500; // 500 characters
+    
+    $_SESSION['settings']['uploads']['max_file_size'] = 5000000; // 5MB
 }
 
 // styles settings:
