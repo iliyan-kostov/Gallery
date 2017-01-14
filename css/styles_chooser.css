@@ -1,0 +1,11 @@
+#color_blue, #color_green {
+    border: 1px solid yellow;
+}
+
+#color_blue {
+    background: #004590;
+}
+
+#color_green {
+    background: #006030;;
+}

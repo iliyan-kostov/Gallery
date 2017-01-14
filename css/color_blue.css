@@ -1,0 +1,21 @@
+body {
+    background-color: #001530;
+}
+
+.topnav, .searchresults th {
+    border-color: white;
+    background-color: black;
+}
+
+.text, .topnav a, .searchresults td, .searchresults {
+    color: white;
+}
+
+.searchresults td, input[type="text"], input[type="password"], input[type="textarea"] {
+    background-color: #004590;
+}
+
+.topnav a:hover {
+    color: black;
+    background-color: white;
+}

@@ -51,20 +51,31 @@ function homepage() {
                 if (!$stmt->execute()) {
                     // error
                 } else {
-                    echo '        ' . "\n";
-                    echo '        ' . '<table class="searchresults">' . "\n";
-                    echo '        ' . '    <tr>' . "\n";
                     $stmt->bind_result($image_id, $image_name, $gallery_id);
-                    // cells:
-                    while ($stmt->fetch()) {
-                        $path = 'galleries/' . $gallery_id . '/' . $image_name;
-                        echo '        ' . '        <td>' . "\n";
-                        echo '        ' . '            <a href="index.php?getImage=' . $image_id . '"><img src="' . $path . '" class="preview"></a>' . "\n";
-                        echo '        ' . '        </td>' . "\n";
+                    // check if ANY images have been uploaded:
+                    // (do {} while style)
+                    if (($stmt->fetch())) {
+                        echo '        ' . "\n";
+                        echo '        ' . '<table class="searchresults">' . "\n";
+                        echo '        ' . '    <tr>' . "\n";
+                        // add first image:
+                        {
+                            $path = 'galleries/' . $gallery_id . '/' . $image_name;
+                            echo '        ' . '        <td>' . "\n";
+                            echo '        ' . '            <a href="index.php?getImage=' . $image_id . '"><img src="' . $path . '" class="preview"></a>' . "\n";
+                            echo '        ' . '        </td>' . "\n";
+                        }
+                        // cells for additional images (other than first):
+                        while ($stmt->fetch()) {
+                            $path = 'galleries/' . $gallery_id . '/' . $image_name;
+                            echo '        ' . '        <td>' . "\n";
+                            echo '        ' . '            <a href="index.php?getImage=' . $image_id . '"><img src="' . $path . '" class="preview"></a>' . "\n";
+                            echo '        ' . '        </td>' . "\n";
+                        }
+                        echo '        ' . '    </tr>' . "\n";
+                        echo '        ' . '</table>' . "\n";
+                        echo '        ' . "\n";
                     }
-                    echo '        ' . '    </tr>' . "\n";
-                    echo '        ' . '</table>' . "\n";
-                    echo '        ' . "\n";
                 }
                 $stmt->close();
             }

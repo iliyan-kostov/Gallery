@@ -29,6 +29,23 @@ echo '            ' . '    <tr>' . "\n";
     echo '            ' . '                </form>' . "\n";
     echo '            ' . '            </div>' . "\n";
     echo '            ' . '        </td>' . "\n";
+    
+    
+    
+    echo '            ' . '        <td class="floatleft" id="color_green">' . "\n";
+    echo '            ' . '            <div class="text">' . "\n";
+    echo '            ' . '                <a href="index.php?setStyle=color_green">' . "\n";
+    echo '            ' . '                    [green]' . "\n";
+    echo '            ' . '                </a>' . "\n";
+    echo '            ' . '            </div>' . "\n";
+    echo '            ' . '        </td>' . "\n";
+    echo '            ' . '        <td class="floatleft" id="color_blue">' . "\n";
+    echo '            ' . '            <div class="text">' . "\n";
+    echo '            ' . '                <a href="index.php?setStyle=color_blue">' . "\n";
+    echo '            ' . '                    [blue]' . "\n";
+    echo '            ' . '                </a>' . "\n";
+    echo '            ' . '            </div>' . "\n";
+    echo '            ' . '        </td>' . "\n";
 }
 
 // user controls:
