@@ -14,7 +14,7 @@ if (!isset($_SESSION['settings'])) {
     if (!isset($_SESSION['settings']['database'])) {
         $_SESSION['settings']['database'] = array();
     }
-
+    
     $_SESSION['settings']['database']['server_name'] = 'INSERT_SERVER_NAME_HERE';
     $_SESSION['settings']['database']['database_name'] = 'INSERT_DATABASE_NAME_HERE';
     $_SESSION['settings']['database']['root_username'] = 'INSERT_ROOT_USERNAME_HERE';
@@ -30,6 +30,7 @@ if (!isset($_SESSION['settings'])) {
     $_SESSION['settings']['database']['max_comments_length'] = 500; // 500 characters
     
     $_SESSION['settings']['uploads']['max_file_size'] = 5000000; // 5MB
+    $_SESSION['settings']['homepage']['recent_images'] = 5; // count of recent images on homepage
 }
 
 // styles settings:

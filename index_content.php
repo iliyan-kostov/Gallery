@@ -14,6 +14,6 @@ if (isset($_GET['myGalleries'])) {
 } else if (isset($_GET['getUser'])) {
     require 'getUser.php';
 } else {
-    require 'default.php';
+    require 'homepage.php';
 }
 ?>
