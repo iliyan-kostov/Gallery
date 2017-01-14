@@ -8,7 +8,6 @@ if (isset($_GET['myGalleries'])) {
 } else if (isset($_GET['search'])) {
     require 'search.php';
 } else if (isset($_GET['getGallery'])) {
-    echo '<div class="text">GetGallery page</div>';
     require 'getGallery.php';
 } else if (isset($_GET['getImage'])) {
     echo '<div class="text">GetImage page</div>';
@@ -17,7 +16,6 @@ if (isset($_GET['myGalleries'])) {
     echo '<div class="text">GetUser page</div>';
     require 'getUser.php';
 } else {
-    echo '<div class="text">Default page</div>';
     require 'default.php';
 }
 ?>

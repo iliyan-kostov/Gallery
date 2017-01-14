@@ -6,9 +6,9 @@ function myGalleries() {
         // user not logged in
         echo '        ' . "\n";
         echo '        ' . '<div class="text">' . "\n";
-        echo '        ' . '    <h2>' . "\n";
+        echo '        ' . '    <h3>' . "\n";
         echo '        ' . '        You have to log in to see your galleries!' . "\n";
-        echo '        ' . '    </h2>' . "\n";
+        echo '        ' . '    </h3>' . "\n";
         echo '        ' . '</div>' . "\n";
         echo '        ' . "\n";
     } else {
@@ -25,9 +25,9 @@ function myGalleries() {
                 // name too short!
                 echo '        ' . "\n";
                 echo '        ' . '<div class="text">' . "\n";
-                echo '        ' . '    <h2>' . "\n";
+                echo '        ' . '    <h3>' . "\n";
                 echo '        ' . '        Gallery name too short!' . "\n";
-                echo '        ' . '    </h2>' . "\n";
+                echo '        ' . '    </h3>' . "\n";
                 echo '        ' . '</div>' . "\n";
                 echo '        ' . "\n";
             } else {
@@ -57,17 +57,17 @@ function myGalleries() {
                             // gallery created successfully:
                             echo '        ' . "\n";
                             echo '        ' . '<div class="text">' . "\n";
-                            echo '        ' . '    <h2>' . "\n";
+                            echo '        ' . '    <h3>' . "\n";
                             echo '        ' . '        Gallery created!' . "\n";
-                            echo '        ' . '    </h2>' . "\n";
+                            echo '        ' . '    </h3>' . "\n";
                             echo '        ' . '</div>' . "\n";
                             echo '        ' . "\n";
                         } else {
                             echo '        ' . "\n";
                             echo '        ' . '<div class="text">' . "\n";
-                            echo '        ' . '    <h2>' . "\n";
+                            echo '        ' . '    <h3>' . "\n";
                             echo '        ' . '        Failed to create gallery!' . "\n";
-                            echo '        ' . '    </h2>' . "\n";
+                            echo '        ' . '    </h3>' . "\n";
                             echo '        ' . '</div>' . "\n";
                             echo '        ' . "\n";
                         }
@@ -113,9 +113,9 @@ function myGalleries() {
                                 // Error fetching:
                                 echo '        ' . "\n";
                                 echo '        ' . '<div class="text">' . "\n";
-                                echo '        ' . '    <h2>' . "\n";
+                                echo '        ' . '    <h3>' . "\n";
                                 echo '        ' . '        Failed to delete gallery!' . "\n";
-                                echo '        ' . '    </h2>' . "\n";
+                                echo '        ' . '    </h3>' . "\n";
                                 echo '        ' . '</div>' . "\n";
                                 echo '        ' . "\n";
                             } else {
@@ -124,9 +124,9 @@ function myGalleries() {
                                     // the gallery doesn't belong to the user that requested to delete it:
                                     echo '        ' . "\n";
                                     echo '        ' . '<div class="text">' . "\n";
-                                    echo '        ' . '    <h2>' . "\n";
+                                    echo '        ' . '    <h3>' . "\n";
                                     echo '        ' . '        The gallery you want to delete is not yours!' . "\n";
-                                    echo '        ' . '    </h2>' . "\n";
+                                    echo '        ' . '    </h3>' . "\n";
                                     echo '        ' . '</div>' . "\n";
                                     echo '        ' . "\n";
                                 } else {
@@ -189,9 +189,9 @@ function myGalleries() {
                                     {
                                         echo '        ' . "\n";
                                         echo '        ' . '<div class="text">' . "\n";
-                                        echo '        ' . '    <h2>' . "\n";
+                                        echo '        ' . '    <h3>' . "\n";
                                         echo '        ' . '        Gallery deleted!' . "\n";
-                                        echo '        ' . '    </h2>' . "\n";
+                                        echo '        ' . '    </h3>' . "\n";
                                         echo '        ' . '</div>' . "\n";
                                         echo '        ' . "\n";
                                     }
@@ -245,7 +245,7 @@ function myGalleries() {
                         echo '        ' . '        <th>' . "\n";
                         echo '        ' . '            <div class="text">gallery name:</div>' . "\n";
                         echo '        ' . '        </th>' . "\n";
-                        echo '        ' . '        <th>' . "\n";
+                        echo '        ' . '        <th class="description">' . "\n";
                         echo '        ' . '            <div class="text">gallery description:</div>' . "\n";
                         echo '        ' . '        </th>' . "\n";
                         echo '        ' . '        <th>' . "\n";
@@ -255,12 +255,12 @@ function myGalleries() {
                         while ($stmt->fetch()) {
                             echo '        ' . '    <tr>' . "\n";
                             echo '        ' . '        <td>' . "\n";
-                            echo '        ' . '            <a class="text" href="index.php?getGallery=' . $gallery_id . '">' . $gallery_id . '</a>' . "\n";
+                            echo '        ' . '            ' . $gallery_id . "\n";
                             echo '        ' . '        </td>' . "\n";
                             echo '        ' . '        <td>' . "\n";
                             echo '        ' . '            <a class="text" href="index.php?getGallery=' . $gallery_id . '">' . $gallery_name . '</a>' . "\n";
                             echo '        ' . '        </td>' . "\n";
-                            echo '        ' . '        <td>' . "\n";
+                            echo '        ' . '        <td class="description">' . "\n";
                             echo '        ' . '            ' . $gallery_description . "\n";
                             echo '        ' . '        </td>' . "\n";
                             echo '        ' . '        <td>' . "\n";
@@ -282,9 +282,9 @@ function myGalleries() {
 
             echo '        ' . '<form action = "index.php" method="get">' . "\n";
             echo '        ' . '    <div class="text">' . "\n";
-            echo '        ' . '        <h2>' . "\n";
+            echo '        ' . '        <h3>' . "\n";
             echo '        ' . '            Create new gallery:' . "\n";
-            echo '        ' . '        </h2>' . "\n";
+            echo '        ' . '        </h3>' . "\n";
             echo '        ' . '    </div>' . "\n";
             echo '        ' . '    <table class="searchresults">' . "\n";
             echo '        ' . '        <tr>' . "\n";

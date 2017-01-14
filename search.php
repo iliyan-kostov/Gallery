@@ -11,15 +11,15 @@ function search() {
 
         if (!is_numeric($searchlimit) || $searchlimit < 1) {
             echo '            ' . '<div class="text">' . "\n";
-            echo '            ' . '    <h2>' . "\n";
+            echo '            ' . '    <h3>' . "\n";
             echo '            ' . '        Search results: none (wrong input!!!)' . "\n";
-            echo '            ' . '    </h2>' . "\n";
+            echo '            ' . '    </h3>' . "\n";
             echo '            ' . '</div>' . "\n";
         } else {
             echo '            ' . '<div class="text">' . "\n";
-            echo '            ' . '    <h2>' . "\n";
+            echo '            ' . '    <h3>' . "\n";
             echo '            ' . '        Search results for: "' . $search . '" (showing ' . $searchlimit . ' of each)' . "\n";
-            echo '            ' . '    </h2>' . "\n";
+            echo '            ' . '    </h3>' . "\n";
             echo '            ' . '</div>' . "\n";
 
             // perform search:
