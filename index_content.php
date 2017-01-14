@@ -3,11 +3,7 @@
 
 echo "\n";
 
-if (isset($_GET['login'])) {
-    
-} else if (isset($_GET['logout'])) {
-    
-} else if (isset($_GET['myGalleries'])) {
+if (isset($_GET['myGalleries'])) {
     require 'myGalleries.php';
 } else if (isset($_GET['search'])) {
     require 'search.php';

@@ -69,5 +69,4 @@ function login() {
 }
 
 login();
-require 'index.php';
 ?>

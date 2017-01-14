@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <?php require_once 'sessionSettings.php'; ?>
+<?php
+if (isset($_POST['login'])) {
+    require_once 'login.php';
+} else if (isset($_POST['logout'])) {
+    require_once 'logout.php';
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">

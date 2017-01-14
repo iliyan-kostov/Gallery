@@ -8,5 +8,4 @@ function logout() {
 }
 
 logout();
-require 'index.php';
 ?>

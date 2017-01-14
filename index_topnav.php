@@ -38,7 +38,8 @@ echo '            ' . '    <tr>' . "\n";
         {
             echo '            ' . '        <td class="floatright" id="userControls">' . "\n";
             echo '            ' . '            <div class="text">' . "\n";
-            echo '            ' . '                <form action="logout.php" method="get">' . "\n";
+            echo '            ' . '                <form action="index.php" method="post">' . "\n";
+            echo '            ' . '                    <input type ="hidden" name ="logout" value="">' . "\n";
             echo '            ' . '                    Logged in as: ' . $_SESSION['username'] . ' <input type="submit" value="Logout">' . "\n";
             echo '            ' . '                </form>' . "\n";
             echo '            ' . '            </div>' . "\n";
@@ -54,9 +55,10 @@ echo '            ' . '    <tr>' . "\n";
         {
             echo '            ' . '        <td class="floatright" id="userControls">' . "\n";
             echo '            ' . '            <div class="text">' . "\n";
-            echo '            ' . '                <form action="login.php" method="post">' . "\n";
+            echo '            ' . '                <form action="index.php" method="post">' . "\n";
             echo '            ' . '                    <input type="text" name="username">' . "\n";
             echo '            ' . '                    <input type="password" name="password">' . "\n";
+            echo '            ' . '                    <input type ="hidden" name ="login" value="">' . "\n";
             echo '            ' . '                    <input type="submit" value="Login">' . "\n";
             echo '            ' . '                </form>' . "\n";
             echo '            ' . '            </div>' . "\n";
