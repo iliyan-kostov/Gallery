@@ -1,4 +1,3 @@
-<?php require_once 'sessionSettings.php'; ?>
 <?php
 
 // session initialization:
