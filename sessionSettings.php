@@ -14,7 +14,7 @@ if (!isset($_SESSION['settings'])) {
     if (!isset($_SESSION['settings']['database'])) {
         $_SESSION['settings']['database'] = array();
     }
-
+    
     $_SESSION['settings']['database']['server_name'] = 'INSERT_SERVER_NAME_HERE';
     $_SESSION['settings']['database']['database_name'] = 'INSERT_DATABASE_NAME_HERE';
     $_SESSION['settings']['database']['root_username'] = 'INSERT_ROOT_USERNAME_HERE';

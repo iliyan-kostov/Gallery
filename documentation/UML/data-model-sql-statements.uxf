@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>14</y>
+      <w>609</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>halign=left
+CREATE DATABASE IF NOT EXISTS `database_name` 
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>70</y>
+      <w>609</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>halign=left
+CREATE TABLE IF NOT EXISTS `users`
+(
+    `username` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `password` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    PRIMARY KEY (`username`) USING BTREE
+) ENGINE = InnoDB;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>175</y>
+      <w>609</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>halign=left
+CREATE TABLE IF NOT EXISTS `galleries`
+(
+    `username` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `gallery_id` INT NOT NULL AUTO_INCREMENT,
+    `gallery_name` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `gallery_description` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+    PRIMARY KEY (`gallery_id`) USING HASH,
+    FOREIGN KEY (`username`) REFERENCES `users`(`username`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    INDEX (`username`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT=1;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>322</y>
+      <w>609</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>halign=left
+CREATE TABLE IF NOT EXISTS `images`
+(
+    `gallery_id` INT NOT NULL,
+    `image_id` INT NOT NULL AUTO_INCREMENT,
+    `image_name` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `image_description` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+    PRIMARY KEY (`image_id`) USING HASH,
+    FOREIGN KEY (`gallery_id`) REFERENCES `galleries`(`gallery_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    UNIQUE KEY `image_file_path` (`gallery_id`, `image_name`),
+    INDEX (`gallery_id`) USING HASH
+) ENGINE = InnoDB AUTO_INCREMENT=1;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>469</y>
+      <w>609</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>halign=left
+CREATE TABLE IF NOT EXISTS `comments`
+(
+    `image_id` INT NOT NULL,
+    `username` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `comment_id` INT NOT NULL AUTO_INCREMENT,
+    `comment_text` VARCHAR(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    PRIMARY KEY (`comment_id`) USING HASH,
+    FOREIGN KEY (`image_id`) REFERENCES `images`(`image_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    FOREIGN KEY (`username`) REFERENCES `users`(`username`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    INDEX (`image_id`) USING HASH,
+    INDEX (`username`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT=1;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

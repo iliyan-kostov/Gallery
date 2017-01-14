@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>0</y>
+      <w>240</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>User
+&lt;&lt;users&gt;&gt;
+--
++username: VARCHAR(30)
++password: VARCHAR(30)
+--
++register(...)
++createGallery(...)
++uploadImage(...)
++comment(...)
+--
+Functionality:
+-- can be registered for the site
+-- registered users can create galleries
+-- registered users can upload images
+    to galleries they own
+-- registered users can comment on images</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>0</y>
+      <w>240</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Gallery
+&lt;&lt;galleries&gt;&gt;
+--
++username: VARCHAR(30)
++gallery_id: INT
++gallery_name: VARCHAR(30)
++gallery_description: VARCHAR(500)
+--
+
+
+--
+Functionality:
+-- can be created by registered users
+-- can contain images uploaded by
+    the gallery owner
+-- can have an optional description</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>312</y>
+      <w>240</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Image
+&lt;&lt;images&gt;&gt;
+--
++gallery_id: INT
++image_id: INT
++image_name: VARCHAR(30)
++image_description: VARCHAR(500)
+--
+
+
+--
+Functionality:
+-- can be uploaded by registered
+    users to a gallery they own
+-- can contain images
+-- can have an optional description
+-- can receive comments from registered users</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>80</y>
+      <w>176</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+createGallery(...)
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>136</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=[username]&lt;-
+isOwnedBy
+m1=        1
+m2=0..*</panel_attributes>
+    <additional_attributes>40.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>312</y>
+      <w>240</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Comment
+&lt;&lt;comments&gt;&gt;
+--
++image_id: INT
++username: VARCHAR(30)
++comment_id: INT
++comment_text: VARCHAR(500)
+--
+
+
+--
+Functionality:
+-- can be created by registered users
+    for a specific image</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>216</y>
+      <w>88</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+comment(...)
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>184</x>
+      <y>216</y>
+      <w>104</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=[username]&lt;-
+isCreatedBy
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>216</y>
+      <w>88</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=[gallery_id]&lt;-
+belongsTo
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>400</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=[image_id]&lt;-
+references
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>216</y>
+      <w>176</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+uploadImage(...)
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>200.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>328</x>
+      <y>560</y>
+      <w>288</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>file structure:
+/ galleries / gallery_id / image_name
+
+example:
+/ galleries / 101 / tree.jpg</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
